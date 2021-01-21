@@ -8,22 +8,23 @@
       @foreach ($products as $product )
         <li>
           <h3>
-            <a href="#">
+            <a href="{{ route('products.show', ['product' => $product->id]) }}">
               {{ $product->name }}
             </a>
           </h3>
+
         </li>
         <li>
-          {{ $product->memory }}
+          Memory : {{ $product->memory }}
         </li>
         <li>
-          {{ $product->description }}
+          Description : {{ $product->description }}
         </li>
         <li>
-          {{ $product->availability }}
+          Availability :{{ $product->availability }}
         </li>
         <li>
-          {{ $product->price }}
+        Price :   {{ $product->price }}
         </li>
 
       @endforeach
